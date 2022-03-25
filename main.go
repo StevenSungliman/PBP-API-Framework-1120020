@@ -4,6 +4,7 @@ import (
 	"github.com/go-martini/martini"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/martini-contrib/binding"
+	"github.com/martini-contrib/cors"
 	"github.com/martini-contrib/render"
 
 	controller "github.com/PrakPBP/Martini/controller"
@@ -13,6 +14,11 @@ func main() {
 	m := martini.Classic()
 
 	m.Use(render.Renderer())
+	m.Use(cors.Allow(&cors.Options{
+		AllowOrigins:     []string{"https://*"},
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
+		AllowCredentials: true,
+	}))
 
 	m.Get("/users", controller.GetAllUsers)
 	m.Post("/users", binding.Bind(controller.User{}), controller.InsertUser)

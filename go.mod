@@ -16,6 +16,7 @@ require (
 	github.com/gorilla/sessions v1.2.1 // indirect
 	github.com/martini-contrib/auth v0.0.0-20150219114609-fa62c19b7ae8 // indirect
 	github.com/martini-contrib/binding v0.0.0-20160701174519-05d3e151b6cf // indirect
+	github.com/martini-contrib/cors v0.0.0-20141016003011-553b9208d353 // indirect
 	github.com/martini-contrib/render v0.0.0-20150707142108-ec18f8345a11 // indirect
 	github.com/martini-contrib/sessionauth v0.0.0-20140402121541-3c15d8cae6c3 // indirect
 	github.com/martini-contrib/sessions v0.0.0-20140630231722-fa13114fbcf0 // indirect
